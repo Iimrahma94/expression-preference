@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expressions of Preference | English Learning</title>
+<style>
+:root{--navy:#142b4a;--blue:#2463eb;--sky:#eaf2ff;--gold:#e9b949;--ink:#1e293b;--muted:#64748b;--line:#e5eaf2;--bg:#f5f7fb;--white:#fff;--green:#16845b;--red:#c2413a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.sidebar{background:var(--navy);color:#fff;padding:26px 16px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;gap:12px;align-items:center;padding:0 10px 28px;border-bottom:1px solid #ffffff26}.brand-icon{width:42px;height:42px;border-radius:13px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:900;font-size:20px}.brand strong{display:block;font-size:14px;letter-spacing:.4px}.brand small{color:#cbd5e1;font-size:11px}
+.nav-label{font-size:10px;color:#9fb1c8;letter-spacing:1.7px;font-weight:800;margin:25px 12px 10px}.nav{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;color:#d9e4f3;padding:12px;border-radius:11px;text-align:left;font-size:13px;cursor:pointer;margin:3px 0}.nav:hover,.nav.active{background:#ffffff18;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--gold)}.nav span{width:22px;text-align:center;font-size:16px}
+.side-note{margin:28px 6px 0;background:#ffffff10;border:1px solid #ffffff1a;border-radius:14px;padding:15px;font-size:12px;color:#d9e4f3}.side-note b{display:block;color:#fff;margin-bottom:5px}
+main{padding:28px clamp(18px,4vw,48px) 55px;max-width:1400px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:25px}.crumb{font-size:12px;color:var(--muted)}.student{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700}.avatar{width:34px;height:34px;border-radius:50%;background:#dbeafe;color:#1d4ed8;display:grid;place-items:center;font-weight:800}
+.hero{background:linear-gradient(120deg,#142b4a,#214c7b);border-radius:22px;color:white;padding:clamp(24px,4vw,42px);position:relative;overflow:hidden;display:flex;justify-content:space-between;gap:20px;align-items:center}.hero:after{content:"A–Z";position:absolute;right:6%;top:-34px;font-size:150px;font-weight:900;color:#ffffff0b;letter-spacing:-10px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#f5d47b;font-weight:800}.hero h1{font-size:clamp(27px,4vw,43px);line-height:1.12;margin:10px 0 12px;max-width:650px}.hero p{color:#dbe7f5;max-width:630px;margin:0 0 20px;font-size:14px}.pill{display:inline-flex;background:#ffffff18;border:1px solid #ffffff2c;border-radius:100px;padding:7px 12px;font-size:11px;margin-right:6px}.hero-badge{z-index:1;width:110px;height:110px;flex:0 0 110px;border:1px solid #ffffff40;border-radius:25px;display:grid;place-items:center;font-size:47px;background:#ffffff0d}
+.section{display:none}.section.active{display:block;animation:fade .2s ease}@keyframes fade{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none}}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:20px 0}.stat,.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 4px 18px #1e293b05}.stat{display:flex;align-items:center;gap:13px}.stat-icon{width:43px;height:43px;border-radius:13px;background:var(--sky);display:grid;place-items:center;font-size:21px}.stat small{display:block;color:var(--muted);font-size:11px}.stat b{font-size:19px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 15px}.section-head h2{margin:0;font-size:23px;color:var(--navy)}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.tag{font-size:11px;color:#2455b7;background:#edf4ff;padding:6px 10px;border-radius:100px;font-weight:700}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card h3{margin:0 0 8px;color:var(--navy);font-size:16px}.card p{font-size:13px;color:#526176;margin:8px 0}.formula{background:#f0f5ff;border-left:3px solid var(--blue);padding:12px 14px;border-radius:8px;font-weight:800;color:#204c9a;font-size:13px;margin:12px 0}.example{background:#f8fafc;border:1px solid var(--line);padding:12px;border-radius:10px;font-size:13px;margin-top:10px}.example b{color:var(--green)}.translation{color:var(--muted);font-size:12px!important;margin-top:4px!important}
+.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}th,td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line)}th{background:#f0f5ff;color:var(--navy);font-size:11px;text-transform:uppercase;letter-spacing:.5px}tr:last-child td{border-bottom:0}
+.callout{border-radius:12px;padding:14px 16px;background:#fff8e5;border:1px solid #f3df9c;color:#775b14;font-size:13px;margin:16px 0}.callout strong{display:block;margin-bottom:4px}
+.dialogue{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.dialogue:last-child{border-bottom:0}.speaker{font-weight:800;color:var(--blue)}.en{color:var(--ink)}.id{font-size:12px;color:var(--muted);font-style:italic}
+.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer;font-size:12px;transition:.15s}.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#194fc7}.btn-light{background:#edf2f8;color:var(--navy)}.btn-gold{background:var(--gold);color:#1c2d43}.btn-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.question{padding:17px 0;border-bottom:1px solid var(--line)}.question:last-child{border-bottom:0}.question p{font-weight:700;color:var(--ink);margin:0 0 10px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.option{border:1px solid var(--line);background:#fff;border-radius:9px;padding:10px;text-align:left;font-size:12px;cursor:pointer;color:#334155}.option:hover{border-color:#8bb0ff;background:#f8fbff}.option.selected{border-color:var(--blue);background:#eaf2ff}.option.correct{border-color:#72c7a6;background:#eafaf2}.option.wrong{border-color:#f0a29c;background:#fff0ef}.feedback{font-size:12px;margin-top:7px}.result{display:none;padding:18px;background:#eef6ff;border-radius:12px;margin-top:16px}.result strong{font-size:23px;color:var(--navy)}.progress{height:7px;background:#e8edf5;border-radius:100px;overflow:hidden;margin-top:12px}.progress div{height:100%;background:var(--blue);width:0;transition:.25s}
+.flashcard{min-height:160px;display:grid;place-items:center;text-align:center;border:1px dashed #a7bfed;background:#f4f8ff;border-radius:14px;padding:24px;cursor:pointer}.flashcard .big{font-size:25px;color:var(--navy);font-weight:800}.flashcard small{display:block;color:var(--muted);margin-top:12px}.prompt-list{display:flex;flex-wrap:wrap;gap:8px}.prompt{border:1px solid #d9e2f0;background:#fff;border-radius:100px;padding:8px 12px;font-size:12px;cursor:pointer}.prompt.active{background:#eaf2ff;border-color:#8bb0ff;color:#194fc7}
+textarea,input[type=text]{width:100%;border:1px solid #d8e1ed;border-radius:10px;padding:12px;font:inherit;font-size:13px;outline:none}textarea:focus,input:focus{border-color:#7ca5f8;box-shadow:0 0 0 3px #2463eb12}textarea{min-height:150px;resize:vertical}.small-muted{color:var(--muted);font-size:12px}.footer{text-align:center;color:#8190a4;font-size:11px;padding:30px 0 0}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative;padding:14px}.brand{padding-bottom:13px}.nav-label,.side-note{display:none}.nav-wrap{display:flex;gap:5px;overflow-x:auto;padding-top:10px}.nav{white-space:nowrap;width:auto;flex:0 0 auto;padding:10px}.nav span{width:auto}.hero-badge{display:none}main{padding-top:18px}.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.stats,.grid2,.grid3{grid-template-columns:1fr}.hero{padding:24px}.hero h1{font-size:29px}.topbar{align-items:flex-start}.options{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.stat{padding:15px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-icon">E</div><div><strong>ENGLISH LEARNING</strong><small>Grade XII · Vocational School</small></div></div>
+  <div class="nav-label">LEARNING MENU</div>
+  <div class="nav-wrap">
+    <button class="nav active" data-section="dashboard"><span>⌂</span> Dashboard</button>
+    <button class="nav" data-section="definition"><span>◎</span> Definition & Goals</button>
+    <button class="nav" data-section="expressions"><span>✎</span> Expressions</button>
+    <button class="nav" data-section="examples"><span>▤</span> Examples & Dialogues</button>
+    <button class="nav" data-section="practice"><span>✓</span> Practice Quiz</button>
+    <button class="nav" data-section="task"><span>✦</span> Speaking Task</button>
+  </div>
+  <div class="side-note"><b>Learning tip</b>Read the pattern, study the example, then try making your own sentence. Mistakes are part of learning!</div>
+</aside>
+<main>
+  <div class="topbar"><div class="crumb">Learning Portal / <b>Expressions of Preference</b></div><div class="student"><div class="avatar">XII</div><span>CLASS XII · SMK</span></div></div>
+
+  <section class="section active" id="dashboard">
+    <div class="hero"><div><div class="eyebrow">ENGLISH · COMMUNICATION SKILLS</div><h1>Expressions of Preference</h1><p>Learn how to express choices, compare alternatives, and explain your reasons in everyday life and the workplace.</p><span class="pill">📘 Learning module</span><span class="pill">⏱ 3 × 45 minutes</span><span class="pill">🎯 Grade XII</span></div><div class="hero-badge">A↔B</div></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-icon">🎯</div><div><small>Learning goals</small><b>4 key skills</b></div></div>
+      <div class="stat"><div class="stat-icon">💬</div><div><small>Expression patterns</small><b>6 patterns</b></div></div>
+      <div class="stat"><div class="stat-icon">📝</div><div><small>Practice questions</small><b>10 questions</b></div></div>
+    </div>
+    <div class="section-head"><div><h2>Start your learning journey</h2><p>Choose a section and learn step by step.</p></div><span class="tag">LEARN · PRACTICE · REFLECT</span></div>
+    <div class="grid3">
+      <div class="card"><h3>01 · Understand</h3><p>Learn the definition, purpose, and situations where preferences are used.</p><button class="btn btn-light" onclick="showSection('definition')">Explore definition →</button></div>
+      <div class="card"><h3>02 · Learn expressions</h3><p>Understand grammar patterns and see examples with Indonesian translations.</p><button class="btn btn-light" onclick="showSection('expressions')">Study patterns →</button></div>
+      <div class="card"><h3>03 · Practice</h3><p>Check your understanding with an interactive quiz and speaking activity.</p><button class="btn btn-primary" onclick="showSection('practice')">Start quiz →</button></div>
+    </div>
+    <div class="section-head"><div><h2>Essential question</h2><p>Think about your own preferences.</p></div></div>
+    <div class="card"><h3>If you have two job offers, how would you choose?</h3><p>Would you prefer a higher salary or a better opportunity to develop your skills? Think about your reason. There may be more than one good answer.</p><div class="callout"><strong>Today's big idea</strong>Preferences can be different. We should explain our choices clearly and respect other people's opinions.</div></div>
+  </section>
+
+  <section class="section" id="definition">
+    <div class="section-head"><div><h2>Definition & Learning Goals</h2><p>Understand what preference means and why it matters.</p></div><span class="tag">01 · UNDERSTAND</span></div>
+    <div class="card"><h3>What are Expressions of Preference?</h3><p><b>Expressions of Preference</b> are phrases used to say which person, thing, activity, or option we like or choose more than another.</p><div class="example"><b>Example:</b> I prefer tea to coffee.<div class="translation">Artinya: Saya lebih suka teh daripada kopi.</div></div><p>We use these expressions to talk about personal choices, compare alternatives, ask what other people prefer, and explain our reasons.</p></div>
+    <div class="section-head"><div><h2>Learning objectives</h2><p>By the end of this lesson, you can…</p></div></div>
+    <div class="grid2">
+      <div class="card"><h3>🎯 Identify</h3><p>Recognize preference expressions in sentences and conversations.</p></div>
+      <div class="card"><h3>🧩 Use grammar</h3><p>Use <i>prefer, would prefer, would rather</i> and <i>like ... better than</i> correctly.</p></div>
+      <div class="card"><h3>💬 Communicate</h3><p>Ask and answer questions about choices, including giving reasons.</p></div>
+      <div class="card"><h3>🤝 Respect choices</h3><p>Express agreement or disagreement politely.</p></div>
+    </div>
+    <div class="section-head"><div><h2>Where can we use it?</h2><p>Connect English to real situations.</p></div></div>
+    <div class="grid3"><div class="card"><h3>🏠 Daily life</h3><p>Food, hobbies, music, and activities.</p></div><div class="card"><h3>🏫 Education</h3><p>Choosing a subject, training, or university.</p></div><div class="card"><h3>🏢 Workplace</h3><p>Discussing shifts, teamwork, and career options.</p></div></div>
+  </section>
+
+  <section class="section" id="expressions">
+    <div class="section-head"><div><h2>Expressions & Grammar Patterns</h2><p>Study the formula first, then read the example aloud.</p></div><span class="tag">02 · LANGUAGE FOCUS</span></div>
+    <div class="grid2">
+      <div class="card"><h3>1. Prefer + noun</h3><p>Used to compare two things.</p><div class="formula">Subject + prefer(s) + A + to + B</div><div class="example"><b>I prefer tea to coffee.</b><div class="translation">Saya lebih suka teh daripada kopi.</div></div><p>For he/she/it in the simple present, use <b>prefers</b>.</p></div>
+      <div class="card"><h3>2. Prefer + V-ing</h3><p>Used to compare two activities.</p><div class="formula">Subject + prefer(s) + V-ing + to + V-ing</div><div class="example"><b>I prefer reading to watching TV.</b><div class="translation">Saya lebih suka membaca daripada menonton TV.</div></div></div>
+      <div class="card"><h3>3. Prefer + to-infinitive</h3><p>Used to state a general preference.</p><div class="formula">Subject + prefer(s) + to + V1</div><div class="example"><b>I prefer to study at night.</b><div class="translation">Saya lebih suka belajar pada malam hari.</div></div></div>
+      <div class="card"><h3>4. Would prefer</h3><p>Often used for a particular or current choice.</p><div class="formula">Subject + would prefer + to + V1</div><div class="example"><b>I would prefer to work in Japan.</b><div class="translation">Saya lebih memilih bekerja di Jepang.</div></div></div>
+      <div class="card"><h3>5. Would rather</h3><p>Used to say which action you would choose.</p><div class="formula">Subject + would rather + V1 + than + V1</div><div class="example"><b>I would rather stay than leave.</b><div class="translation">Saya lebih memilih tinggal daripada pergi.</div></div></div>
+      <div class="card"><h3>6. Like ... better than</h3><p>A common expression in everyday conversation.</p><div class="formula">Subject + like(s) + A + better than + B</div><div class="example"><b>She likes English better than Math.</b><div class="translation">Dia lebih menyukai bahasa Inggris daripada Matematika.</div></div></div>
+    </div>
+    <div class="section-head"><div><h2>Asking about preferences</h2><p>Use these questions to start a conversation.</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Question</th><th>Indonesian meaning</th></tr></thead><tbody>
+      <tr><td>Which do you prefer, tea or coffee?</td><td>Mana yang lebih kamu sukai, teh atau kopi?</td></tr>
+      <tr><td>Do you prefer working alone or in a team?</td><td>Apakah kamu lebih suka bekerja sendiri atau dalam tim?</td></tr>
+      <tr><td>Would you prefer to work indoors or outdoors?</td><td>Apakah kamu lebih memilih bekerja di dalam atau luar ruangan?</td></tr>
+      <tr><td>Would you rather study or work after graduation?</td><td>Apakah kamu lebih memilih kuliah atau bekerja setelah lulus?</td></tr>
+    </tbody></table></div>
+    <div class="section-head"><div><h2>Quick grammar reminder</h2><p>Remember these common patterns.</p></div></div>
+    <div class="callout"><strong>Prefer A TO B · Prefer doing A TO doing B</strong>Use <i>to</i> to compare nouns or -ing activities after <i>prefer</i>.</div>
+    <div class="callout"><strong>Would rather + V1 + THAN + V1</strong>Do not add “to” after <i>would rather</i>. Say “I would rather stay,” not “I would rather to stay.”</div>
+    <div class="callout"><strong>Would prefer + TO + V1</strong>Say “I would prefer to work,” not “I would prefer work.”</div>
+  </section>
+
+  <section class="section" id="examples">
+    <div class="section-head"><div><h2>Examples & Dialogues</h2><p>Read the dialogues and notice how each speaker explains a choice.</p></div><span class="tag">03 · SEE IT IN CONTEXT</span></div>
+    <div class="card"><h3>Dialogue 1 · Choosing a drink</h3><div class="dialogue"><span class="speaker">A:</span> Would you prefer tea or coffee?</div><div class="dialogue"><span class="speaker">B:</span> I would prefer tea, please.</div><div class="dialogue"><span class="speaker">A:</span> Why?</div><div class="dialogue"><span class="speaker">B:</span> Because tea helps me relax. What about you?</div><div class="dialogue"><span class="speaker">A:</span> I prefer coffee to tea because I like its strong taste.</div><p class="id">Focus: “would prefer” and “prefer A to B”.</p></div>
+    <div class="card" style="margin-top:15px"><h3>Dialogue 2 · Study habits</h3><div class="dialogue"><span class="speaker">A:</span> Do you prefer studying alone or with friends?</div><div class="dialogue"><span class="speaker">B:</span> I prefer studying with friends because we can discuss difficult questions.</div><div class="dialogue"><span class="speaker">A:</span> I see. I would rather study alone than study in a group.</div><div class="dialogue"><span class="speaker">B:</span> Why is that?</div><div class="dialogue"><span class="speaker">A:</span> Because I can concentrate better when I study alone.</div><p class="id">Focus: compare activities and give reasons.</p></div>
+    <div class="card" style="margin-top:15px"><h3>Dialogue 3 · Choosing a career</h3><div class="dialogue"><span class="speaker">A:</span> What kind of job would you prefer after graduation?</div><div class="dialogue"><span class="speaker">B:</span> I would prefer to work in a manufacturing company.</div><div class="dialogue"><span class="speaker">A:</span> Why do you prefer that?</div><div class="dialogue"><span class="speaker">B:</span> Because I want to improve my technical skills and gain experience.</div><div class="dialogue"><span class="speaker">A:</span> I see. I would rather work in an international company than work in a small company.</div><div class="dialogue"><span class="speaker">B:</span> That's interesting! We have different career goals.</div><p class="id">Focus: workplace vocabulary and explaining a career preference.</p></div>
+    <div class="section-head"><div><h2>Flashcard practice</h2><p>Click the card to reveal an Indonesian meaning or example.</p></div></div>
+    <div class="card"><div class="flashcard" id="flashcard" onclick="flipCard()"><div><div class="big" id="flash-main">I prefer tea to coffee.</div><small id="flash-sub">Click to reveal meaning · 1 / 5</small></div></div><div class="btn-row"><button class="btn btn-light" onclick="changeCard(-1)">← Previous</button><button class="btn btn-primary" onclick="changeCard(1)">Next card →</button></div></div>
+  </section>
+
+  <section class="section" id="practice">
+    <div class="section-head"><div><h2>Practice Quiz</h2><p>Choose one answer for each question. Your score appears at the end.</p></div><span class="tag">04 · CHECK YOUR UNDERSTANDING</span></div>
+    <div class="card"><div class="small-muted">10 questions · 10 points each</div><div class="progress"><div id="progress-bar"></div></div><div id="quiz"></div><div class="btn-row"><button class="btn btn-primary" id="submit-quiz" onclick="submitQuiz()">Submit answers</button><button class="btn btn-light" onclick="resetQuiz()">Try again</button></div><div class="result" id="quiz-result"></div></div>
+  </section>
+
+  <section class="section" id="task">
+    <div class="section-head"><div><h2>Speaking Task</h2><p>Use your own choices to create a short conversation.</p></div><span class="tag">05 · APPLY YOUR SKILLS</span></div>
+    <div class="card"><h3>Situation: Choosing a career</h3><p>You and your friend have just graduated from vocational school. Discuss what you would prefer to do next.</p><p><b>Your dialogue must include:</b></p><ul class="small-muted"><li>At least two questions about preferences.</li><li>At least three preference expressions.</li><li>At least two reasons for your choices.</li><li>A polite response to a different opinion.</li></ul><div class="section-head"><div><h3>Choose a conversation prompt</h3><p>Click a topic to get started.</p></div></div><div class="prompt-list" id="prompts"><button class="prompt active" data-prompt="Working in Indonesia or abroad">Indonesia or abroad</button><button class="prompt" data-prompt="Working in a team or independently">Team or independent</button><button class="prompt" data-prompt="Going to university or joining job training">University or job training</button><button class="prompt" data-prompt="Morning shift or night shift">Morning or night shift</button></div><div class="callout" id="prompt-help"><strong>Your topic</strong>Working in Indonesia or abroad</div><label for="dialogue-text"><b>Write your dialogue here</b></label><textarea id="dialogue-text" placeholder="A: Which do you prefer, ...?&#10;B: I would prefer ... because ..."></textarea><div class="btn-row"><button class="btn btn-primary" onclick="checkDialogue()">Check my dialogue</button><button class="btn btn-light" onclick="document.getElementById('dialogue-text').value='';document.getElementById('task-feedback').innerHTML=''">Clear</button></div><div class="result" id="task-feedback" style="display:block;background:#f8fafc"><b>Checklist feedback will appear here.</b></div></div>
+    <div class="section-head"><div><h2>Self-reflection</h2><p>Think about what you can do after this lesson.</p></div></div>
+    <div class="card"><label><input type="checkbox"> I can explain the meaning of expressions of preference.</label><br><br><label><input type="checkbox"> I can use “prefer” and “would rather” correctly.</label><br><br><label><input type="checkbox"> I can explain my choice in English.</label><br><br><label><input type="checkbox"> I can respect a different preference.</label></div>
+  </section>
+  <div class="footer">English Learning Dashboard · Expressions of Preference · Grade XII SMK</div>
+</main>
+</div>
+<script>
+const sections=['dashboard','definition','expressions','examples','practice','task'];
+function showSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.section===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav').forEach(n=>n.addEventListener('click',()=>showSection(n.dataset.section)));
+
+const cards=[
+['I prefer tea to coffee.','Saya lebih suka teh daripada kopi.'],
+['I prefer reading to watching TV.','Saya lebih suka membaca daripada menonton TV.'],
+['I would prefer to work abroad.','Saya lebih memilih bekerja di luar negeri.'],
+['I would rather stay than leave.','Saya lebih memilih tinggal daripada pergi.'],
+['Which do you prefer?','Mana yang lebih kamu sukai?']
+];let cardIndex=0,flipped=false;
+function renderCard(){document.getElementById('flash-main').textContent=cards[cardIndex][flipped?1:0];document.getElementById('flash-sub').textContent=(flipped?'Meaning · ':'Click to reveal meaning · ')+(cardIndex+1)+' / '+cards.length}
+function flipCard(){flipped=!flipped;renderCard()}
+function changeCard(d){cardIndex=(cardIndex+d+cards.length)%cards.length;flipped=false;renderCard()}
+
+const questions=[
+{q:'Which sentence is correct?',o:['I prefer coffee than tea.','I prefer coffee to tea.','I prefer to coffee tea.','I prefer coffee from tea.'],a:1,e:'Use “prefer A to B”.'},
+{q:'She _____ working in a team to working alone.',o:['prefer','preferring','prefers','would prefers'],a:2,e:'Use “prefers” with she/he/it in the simple present.'},
+{q:'I would rather _____ at home than go shopping.',o:['staying','to stay','stayed','stay'],a:3,e:'Use V1 after “would rather”.'},
+{q:'Choose the correct sentence.',o:['I prefer reading to watching TV.','I prefer read to watch TV.','I prefer to reading than watching TV.','I would rather to read than watch TV.'],a:0,e:'Use V-ing to compare activities after “prefer”.'},
+{q:'“Would you prefer tea or coffee?” — The best response is…',o:['I prefer than tea.','I would prefer tea, please.','I would rather to tea.','I prefer drinking than coffee.'],a:1,e:'“I would prefer tea, please” is a polite answer.'},
+{q:'Which expression asks about a preference?',o:['What time is it?','Where do you live?','Which do you prefer?','How old are you?'],a:2,e:'“Which do you prefer?” asks someone to choose.'},
+{q:'“Rina likes English better than Mathematics” means…',o:['Rina dislikes all subjects.','Rina prefers Mathematics to English.','Rina likes both equally.','Rina prefers English to Mathematics.'],a:3,e:'“Likes A better than B” means prefers A over B.'},
+{q:'I would prefer _____ in an international company.',o:['work','working','to work','worked'],a:2,e:'Use “would prefer + to + V1”.'},
+{q:'A: I prefer working independently. B: I see your point, but I prefer teamwork. B is…',o:['expressing a different preference politely','apologizing','asking for help','giving an invitation'],a:0,e:'B politely states a different preference.'},
+{q:'Which sentence is correct?',o:['I prefer work than study.','I would rather to choose this job.','I prefer this job than that one.','I would rather choose this job than that one.'],a:3,e:'Use “would rather + V1 + than + V1”.'}
+];
+let answers={};
+function renderQuiz(){const root=document.getElementById('quiz');root.innerHTML='';questions.forEach((q,i)=>{const div=document.createElement('div');div.className='question';div.innerHTML=`<p>${i+1}. ${q.q}</p><div class="options">${q.o.map((op,j)=>`<button class="option ${answers[i]===j?'selected':''}" data-q="${i}" data-a="${j}">${String.fromCharCode(65+j)}. ${op}</button>`).join('')}</div><div class="feedback" id="feedback-${i}"></div>`;root.appendChild(div)});root.querySelectorAll('.option').forEach(b=>b.addEventListener('click',()=>{answers[+b.dataset.q]=+b.dataset.a;document.getElementById('quiz-result').style.display='none';renderQuiz();document.getElementById('progress-bar').style.width=(Object.keys(answers).length/questions.length*100)+'%'}))}
+function submitQuiz(){if(Object.keys(answers).length<questions.length){const missing=questions.length-Object.keys(answers).length;alert('Please answer all questions first. Remaining: '+missing);return}let score=0;questions.forEach((q,i)=>{const correct=answers[i]===q.a;if(correct)score+=10;const btns=document.querySelectorAll(`.option[data-q="${i}"]`);btns.forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add('correct');else if(j===answers[i]&&!correct)b.classList.add('wrong')});document.getElementById('feedback-'+i).innerHTML=`<span style="color:${correct?'#16845b':'#c2413a'}">${correct?'Correct!':'Not quite.'}</span> ${q.e}`});const result=document.getElementById('quiz-result');result.style.display='block';result.innerHTML=`<div>Your score</div><strong>${score}/100</strong><p>${score>=80?'Excellent work! You understand the main patterns.':score>=60?'Good effort. Review the grammar patterns and try again.':'Keep practicing. Revisit the Expressions section and try again.'}</p>`;document.getElementById('submit-quiz').disabled=true;document.getElementById('submit-quiz').textContent='Quiz completed'}
+function resetQuiz(){answers={};document.getElementById('submit-quiz').disabled=false;document.getElementById('submit-quiz').textContent='Submit answers';document.getElementById('quiz-result').style.display='none';document.getElementById('progress-bar').style.width='0%';renderQuiz()}
+renderQuiz();
+const promptHelp={'Working in Indonesia or abroad':'Compare local career opportunities with international work experience. Explain your reason.','Working in a team or independently':'Compare teamwork and independent work. Think about sharing ideas, focus, and responsibility.','Going to university or joining job training':'Compare further education with practical training for a job.','Morning shift or night shift':'Compare work schedules. Think about energy, routine, and personal responsibilities.'};
+document.querySelectorAll('.prompt').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.prompt').forEach(p=>p.classList.toggle('active',p===b));document.getElementById('prompt-help').innerHTML='<strong>Your topic</strong>'+promptHelp[b.dataset.prompt];}));
+function checkDialogue(){const val=document.getElementById('dialogue-text').value.trim();const out=document.getElementById('task-feedback');if(!val){out.style.display='block';out.innerHTML='<b>Please write your dialogue first.</b>';return}const lower=val.toLowerCase();const checks=[['Preference expression',/prefer|would rather|like .* better/.test(lower)],['Reason',/because|since|so that/.test(lower)],['Question mark',/\?/.test(val)],['Polite response',/i see|i understand|good point|i agree|that's interesting|respect/.test(lower)]];out.style.display='block';out.innerHTML='<b>Self-check</b><ul>'+checks.map(c=>`<li style="color:${c[1]?'#16845b':'#b45309'}">${c[1]?'✓':'○'} ${c[0]} ${c[1]?'found':'— consider adding this'}</li>`).join('')+'</ul><p class="small-muted">This is an automatic checklist, not a full language assessment. Review grammar and read your dialogue aloud with a partner.</p>'}
+</script>
+</body>
+</html>
